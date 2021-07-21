@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddViewing"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/propertyIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Property ID:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dateOfViewingButton"
+        android:layout_width="212dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_button"
+        android:text="Date of Viewing"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/propertyIdTextView" />
+
+    <TextView
+        android:id="@+id/viewingDateTextViewAV"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="#3fb08a"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/dateOfViewingButton"
+        app:layout_constraintStart_toStartOf="@+id/dateOfViewingButton"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfViewingButton" />
+
+    <RadioGroup
+        android:id="@+id/interestRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewingDateTextViewAV">
+
+        <TextView
+            android:id="@+id/interestTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Choose Interest"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/leaseTypeSpinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#ffffff"
+            android:checked="true"
+            android:text="Firm"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaseTypeRadioGroup" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="#ffffff"
+            android:text="Conditional"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio1" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="#ffffff"
+            android:text="Considering"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio2" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="#ffffff"
+            android:text="Not Interested"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio3" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/optionalTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Optional)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRadioGroup" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/offerPriceTIL"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:theme="@style/editTextTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRadioGroup">
+
+        <EditText
+            android:id="@+id/offerPriceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Offer Price"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/optionalTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="(Optional)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerPriceTIL" />
+
+    <Button
+        android:id="@+id/offerExpiryDateButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_button"
+        android:text="Offer Expiry Date"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/dateOfViewingButton"
+        app:layout_constraintStart_toStartOf="@+id/dateOfViewingButton"
+        app:layout_constraintTop_toBottomOf="@+id/optionalTextView6" />
+
+    <TextView
+        android:id="@+id/offerDateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#3fb08a"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/offerExpiryDateButton"
+        app:layout_constraintStart_toStartOf="@+id/offerExpiryDateButton"
+        app:layout_constraintTop_toBottomOf="@id/offerExpiryDateButton" />
+
+    <TextView
+        android:id="@+id/optionalTextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="(Optional)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerDateTextView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/conditionsOFOfferTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:theme="@style/editTextTheme"
+        app:layout_constraintEnd_toEndOf="@+id/offerPriceTIL"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/offerPriceTIL"
+        app:layout_constraintTop_toBottomOf="@+id/optionalTextView7">
+
+        <EditText
+            android:id="@+id/conditionsOFOfferEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+            android:hint="Conditions of Offer.."
+            android:inputType="textMultiLine"
+            android:lines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/optionalTextView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="(Optional)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conditionsOFOfferTIL" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/viewingCommentsTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:theme="@style/editTextTheme"
+        app:layout_constraintEnd_toEndOf="@+id/conditionsOFOfferTIL"
+        app:layout_constraintStart_toStartOf="@+id/conditionsOFOfferTIL"
+        app:layout_constraintTop_toBottomOf="@+id/optionalTextView8">
+
+        <EditText
+            android:id="@+id/viewingCommentsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+            android:hint="Viewing Comments.."
+            android:inputType="textMultiLine"
+            android:lines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submitViewingButton"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_button"
+        android:text="Submit Viewing"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewingCommentsTIL" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

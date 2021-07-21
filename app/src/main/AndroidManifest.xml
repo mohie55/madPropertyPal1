@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ma4174h.gre.ac.uk.madpropertypal">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+
+        <activity android:name=".MainActivity"
+            android:label="Mad Property Pal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddProperty"
+            android:label="Add Property"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".ListOfProperties"
+            android:label="Properties"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".ListOfViewings"
+            android:label="Viewings"
+            android:parentActivityName=".ListOfProperties">
+        </activity>
+        <activity android:name=".UpdateProperty"
+            android:label="Property Details"
+            android:parentActivityName=".ListOfProperties">
+        </activity>
+        <activity android:name=".AddViewing"
+            android:label="Add Viewing"
+            android:parentActivityName=".ListOfProperties">
+        </activity>
+        <activity android:name=".ListOfPropertiesSearch"
+            android:label="Advanced Property Search"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity android:name=".UploadPropertyJson"
+            android:label="Advanced Property Search"
+            android:parentActivityName=".MainActivity">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/propertyNameTIL"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/propertyNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Property Name"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/propertyTypeSpinnerRL"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTIL"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/propertyNameTIL">
+
+            <Spinner
+                android:id="@+id/propertyTypeSpinner"
+                style="@android:style/Widget.DeviceDefault.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animationCache="false"
+                android:background="@drawable/teal_outline"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="true"
+                android:spinnerMode="dropdown" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/leaseTypeRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/propertyTypeSpinnerRL">
+
+            <TextView
+                android:id="@+id/leaseTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Choose Lease Type"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/leaseTypeSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="Short let"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/leaseTypeRadioGroup" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:bufferType="normal"
+                android:buttonTint="#ffffff"
+                android:text="Long let"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio1" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Freehold"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio2" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Leasehold"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio3" />
+
+        </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTIL"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/leaseTypeRadioGroup">
+
+            <EditText
+                android:id="@+id/cityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/postcodeTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTIL"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/cityTIL">
+
+            <EditText
+                android:id="@+id/postcodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Postcode"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/noOfBedroomsSpinnerRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTIL"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/postcodeTIL">
+
+            <Spinner
+                android:id="@+id/noOfBedroomsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/teal_outline"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noOfBathroomsSpinnerRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTIL"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTIL"
+            app:layout_constraintTop_toBottomOf="@+id/noOfBedroomsSpinnerRL" >
+
+            <Spinner
+                android:id="@+id/noOfBathroomsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:background="@drawable/teal_outline"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sizeSeekBarTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Property Size"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintTop_toBottomOf="@+id/noOfBathroomsSpinnerRL" />
+
+
+        <SeekBar
+            android:id="@+id/sizeSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="350"
+            android:min="5"
+
+            android:progressDrawable="@drawable/track"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintEnd_toEndOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintStart_toStartOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintTop_toBottomOf="@+id/sizeSeekBarTextView" />
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:background="#3fb08a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeSeekBar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/askingPriceTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintStart_toStartOf="@+id/noOfBathroomsSpinnerRL"
+            app:layout_constraintTop_toBottomOf="@+id/sizeTextView">
+
+            <EditText
+                android:id="@+id/askingPriceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Asking Price"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/optionalTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/askingPriceTIL" />
+
+        <Button
+            android:id="@+id/amenitiesButton"
+            android:layout_width="170dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/add_local_amenities"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#0CBCBC"
+            android:textColorLink="#0A7588"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionalTextView1" />
+
+
+        <TextView
+            android:id="@+id/amenitiesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#3fb08a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesButton" />
+
+        <TextView
+            android:id="@+id/optionalTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesTextView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:theme="@style/editTextTheme"
+            android:layout_marginTop="44dp"
+            app:layout_constraintEnd_toEndOf="@+id/askingPriceTIL"
+            app:layout_constraintStart_toStartOf="@+id/askingPriceTIL"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesTextView">
+
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:ems="10"
+                android:hint="Property Description"
+                android:inputType="textMultiLine"
+                android:lines="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/dateButtonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Property Availability Date"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+        <TextView
+            android:id="@+id/optionalTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:text="Choose Date"
+            android:textColor="#FFFFFF"
+
+            app:layout_constraintEnd_toEndOf="@+id/amenitiesButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/amenitiesButton"
+            app:layout_constraintTop_toBottomOf="@+id/dateButtonTextView" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#3fb08a"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateButton" />
+
+        <TextView
+            android:id="@+id/optionalTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+        <RadioGroup
+            android:id="@+id/furnishTypeRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView">
+
+            <TextView
+                android:id="@+id/furnishTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="3dp"
+                android:text="Furnish Type"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+            <RadioButton
+                android:id="@+id/radio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Furnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/furnishTypeTextView" />
+
+            <RadioButton
+                android:id="@+id/radio6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Partially Furnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio1" />
+
+            <RadioButton
+                android:id="@+id/radio7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Unfurnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio2" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="315dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/dateButton"
+            app:layout_constraintStart_toStartOf="@+id/dateButton"
+            app:layout_constraintTop_toBottomOf="@+id/furnishTypeRadioGroup" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

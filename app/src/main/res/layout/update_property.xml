@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateProperty"
+    android:background="@drawable/gradient_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/propertyNameTILUpdate"
+            android:layout_width="354dp"
+            android:layout_height="58dp"
+            android:theme="@style/editTextTheme"
+            app:counterEnabled="false"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/propertyNameEditTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="PropertyName"
+                android:ems="10"
+                android:hint="Property Name"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/propertyTypeSpinnerUpdateRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/propertyNameTILUpdate" >
+            <Spinner
+                android:id="@+id/propertyTypeSpinnerUpdate"
+                style="@android:style/Widget.DeviceDefault.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:animationCache="false"
+                android:background="@drawable/teal_outline"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="true"
+                android:spinnerMode="dropdown" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/leaseTypeRadioGroupUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/propertyTypeSpinnerUpdateRL">
+
+            <TextView
+                android:id="@+id/leaseTypeTextViewUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Choose Lease Type"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/leaseTypeSpinnerUpdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radio1Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Short let"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/leaseTypeRadioGroupUpdate" />
+
+            <RadioButton
+                android:id="@+id/radio2Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#FFFFFF"
+                android:text="Long let"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio1Update" />
+
+            <RadioButton
+                android:id="@+id/radio3Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#FFFFFF"
+                android:text="Freehold"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio2Update" />
+
+            <RadioButton
+                android:id="@+id/radio4Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#FFFFFF"
+                android:text="Leasehold"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio3Update" />
+
+        </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTILUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/editTextTheme"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/leaseTypeRadioGroupUpdate">
+
+            <EditText
+                android:id="@+id/cityEditTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/postcodeTILUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/cityTILUpdate">
+
+            <EditText
+                android:id="@+id/postcodeEditTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Postcode"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/noOfBedroomsSpinnerUpdateRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/postcodeTILUpdate" >
+
+            <Spinner
+                android:id="@+id/noOfBedroomsSpinnerUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:background="@drawable/teal_outline"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/noOfBathroomsSpinnerUpdateRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintStart_toStartOf="@+id/propertyNameTILUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/noOfBedroomsSpinnerUpdateRL" >
+
+            <Spinner
+                android:id="@+id/noOfBathroomsSpinnerUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:background="@drawable/teal_outline"
+                 />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/sizeSeekBarTextViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Property Size"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/noOfBathroomsSpinnerUpdateRL"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/noOfBathroomsSpinnerUpdateRL"
+            app:layout_constraintTop_toBottomOf="@+id/noOfBathroomsSpinnerUpdateRL" />
+
+
+        <SeekBar
+            android:id="@+id/sizeSeekBarUpdate"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="350"
+            android:min="5"
+
+            android:progressDrawable="@drawable/track"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeSeekBarTextViewUpdate" />
+
+        <TextView
+            android:id="@+id/sizeTextViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:background="#3fb08a"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeSeekBarUpdate" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/askingPriceTILUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:theme="@style/editTextTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeTextViewUpdate">
+
+            <EditText
+                android:id="@+id/askingPriceEditTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Asking Price"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/optionalTextView1Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/askingPriceTILUpdate" />
+
+        <Button
+            android:id="@+id/amenitiesButtonUpdate"
+            android:layout_width="170dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/add_local_amenities"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionalTextView1Update" />
+
+        <TextView
+            android:id="@+id/amenitiesTextViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#3fb08a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesButtonUpdate" />
+
+
+        <TextView
+            android:id="@+id/optionalTextView2Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesTextViewUpdate" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5Update"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/editTextTheme"
+            android:layout_marginTop="44dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesTextViewUpdate">
+
+            <EditText
+                android:id="@+id/descriptionEditTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:ems="10"
+                android:hint="Property Description"
+                android:inputType="textMultiLine"
+                android:lines="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/dateButtonTextViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Property Availability Date"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5Update" />
+
+        <TextView
+            android:id="@+id/optionalTextView3Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5Update" />
+
+        <Button
+            android:id="@+id/dateButtonUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Choose Date"
+            android:textColor="#FFFFFF"
+
+            app:layout_constraintEnd_toEndOf="@+id/amenitiesButtonUpdate"
+            app:layout_constraintStart_toStartOf="@+id/amenitiesButtonUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/dateButtonTextViewUpdate" />
+
+        <TextView
+            android:id="@+id/dateTextViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="#3fb08a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateButtonUpdate" />
+
+        <TextView
+            android:id="@+id/optionalTextView4Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="(Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextViewUpdate" />
+
+        <RadioGroup
+            android:id="@+id/furnishTypeRadioGroupUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextViewUpdate">
+
+            <TextView
+                android:id="@+id/furnishTypeTextViewUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="3dp"
+                android:text="Furnish Type"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateTextViewUpdate" />
+
+            <RadioButton
+                android:id="@+id/radio5Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Furnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/furnishTypeTextViewUpdate" />
+
+            <RadioButton
+                android:id="@+id/radio6Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Partially Furnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio1Update" />
+
+            <RadioButton
+                android:id="@+id/radio7Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="#ffffff"
+                android:text="Unfurnished"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.038"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio2Update" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Update"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/dateButtonUpdate"
+            app:layout_constraintStart_toStartOf="@+id/dateButtonUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/furnishTypeRadioGroupUpdate" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

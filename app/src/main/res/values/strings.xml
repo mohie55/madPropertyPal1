@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">madPropertyPal</string>
+    <string name="add_local_amenities">Add Local Amenities</string>
+    <string name="dialogTitle">Select Local Amenities</string>
+    <string name="okLabel">OK</string>
+    <string name="dismissLabel">Dismiss</string>
+    <string name="clearAllLabel">Clear All</string>
+    <string name="errPropertyName">Please enter a valid property name</string>
+    <string name="errPropertyType">Please choose property type</string>
+    <string name="errCity">Please enter a city</string>
+    <string name="errPostcode">Please enter postcode</string>
+    <string name="errBedrooms">Please enter no. of bedrooms</string>
+    <string name="errBathrooms">Please enter no. of bathrooms</string>
+    <string name="errAskingPrice">Please enter a price</string>
+
+    <string-array name="noOfBedrooms">
+        <item>"Select No. of Bedrooms</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5+</item>
+    </string-array>
+
+    <string-array name="noOfBathrooms">
+        <item>"Select No. of Bathrooms</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3+</item>
+    </string-array>
+
+    <string-array name="noOfReceptionRooms">
+        <item>"Select No. of Reception Rooms</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3+</item>
+    </string-array>
+
+    <string-array name="propertyType">
+        <item>"Select Property Type</item>
+        <item>Flat</item>
+        <item>Terraced House</item>
+        <item>Room in Shared Flat</item>
+        <item>Room in Shared House</item>
+        <item>Semi-detached House</item>
+        <item>End of Terrace House</item>
+        <item>Detached House</item>
+        <item>Maisonette</item>
+        <item>Cottage</item>
+        <item>Bungalow</item>
+        <item>Mansion</item>
+
+    </string-array>
+
+    <string-array name="leaseType">
+        <item>"Select Lease Type</item>
+        <item>Freehold</item>
+        <item>Leasehold</item>
+        <item>Short let</item>
+        <item>Long let</item>
+    </string-array>
+
+    <string-array name="amenitiesList">
+        <item>Restaurant</item>
+        <item>Supermarket</item>
+        <item>Train Station</item>
+        <item>Bus Stop</item>
+        <item>Post Office</item>
+        <item>Gym</item>
+        <item>Swimming Pool</item>
+        <item>School</item>
+        <item>Park</item>
+        <item>Library</item>
+        <item>Cafe</item>
+        <item>Place of Worship</item>
+        <item>Other (in Description)</item>
+    </string-array>
+
+    <string name="url">http://gillwindallapp1.appspot.com/madservlet</string>
+
+
+</resources>

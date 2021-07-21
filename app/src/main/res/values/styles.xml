@@ -1,0 +1,17 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">#46ab89</item>
+        <item name="colorPrimaryDark">#348066</item>
+        <!--<item name="colorAccent">#ffffff</item>-->
+        <item name="android:textColorHint">#999e9e</item>
+    </style>
+
+    <style name="editTextTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+        <item name="android:background">#ffffff</item>
+    </style>
+
+</resources>
